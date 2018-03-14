@@ -1,0 +1,9 @@
+pipeline:
+  build-and-push:
+    image: plugins/docker
+    repo: phpdrone/composer
+    tags:
+      - ${DRONE_BRANCH##*/}-${DRONE_TAG=latest}
+    secrets: [ DOCKER_USERNAME, DOCKER_PASSWORD ]
+    when:
+      branch: [ php56, php71, php72 ]
