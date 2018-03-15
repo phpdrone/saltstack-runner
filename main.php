@@ -10,7 +10,8 @@ $build = new \DronePluginSdk\Build();
  * Instantiate saltstack client
  */
 $saltClient = new \SaltApi\SaltClient(
-  $build->getSecret('saltapi_url'),
+  $build->getSecret('saltapi_host'),
+  $build->getSecret('saltapi_port'),
   $build->getSecret('saltapi_user'),
   $build->getSecret('saltapi_pass'),
   $build->getSecret('saltapi_eauth'),
