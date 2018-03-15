@@ -1,0 +1,6 @@
+{
+  "require": {
+    "phpdrone/drone-plugin-sdk": "~0.1",
+    "naegelin/saltapi": "dev-master"
+  }
+}

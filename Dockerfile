@@ -1,10 +1,16 @@
-FROM php:7.2-alpine
+FROM phpdrone/composer:php71-latest 
 
-ENV COMPOSER_VERSION 1.6.3
-ENV COMPOSER_ALLOW_SUPERUSER 1
-ENV PATH ${PATH}:/root/.composer/vendor/bin
+ENV PLUGIN_TARGET *
+ENV PLUGIN_MODULE test.ping
+ENV PLUGIN_ARGS ""
 
-RUN curl -L https://github.com/composer/composer/releases/download/${COMPOSER_VERSION}/composer.phar > /usr/local/bin/composer
+ENV SALTAPI_URL http://localhost
+ENV SALTAPI_USER user
+ENV SALTAPI_PASS pass
+ENV SALTAPI_EAUTH pam
 
-RUN chmod +x /usr/local/bin/composer
-ENTRYPOINT [ "php", "/usr/local/bin/composer" ]
+RUN mkdir /plugin
+WORKDIR /plugin
+ADD . /plugin
+RUN composer install --ansi --prefer-dist --no-dev
+ENTRYPOINT [ "php", "/plugin/main.php" ]

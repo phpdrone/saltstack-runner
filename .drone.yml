@@ -1,9 +1,9 @@
 pipeline:
   build-and-push:
     image: plugins/docker
-    repo: phpdrone/composer
+    repo: phpdrone/saltstack-runner
     tags:
-      - ${DRONE_BRANCH##*/}-${DRONE_TAG=latest}
+      - latest
     secrets: [ DOCKER_USERNAME, DOCKER_PASSWORD ]
     when:
-      branch: [ php56, php71, php72 ]
+      branch: master
