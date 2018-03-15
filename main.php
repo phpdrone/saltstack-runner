@@ -15,6 +15,7 @@ $saltClient = new \SaltApi\SaltClient(
   $build->getSecret('saltapi_user'),
   $build->getSecret('saltapi_pass'),
   $build->getSecret('saltapi_eauth'),
+  false,
   false
 );
 
