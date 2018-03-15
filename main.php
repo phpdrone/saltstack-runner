@@ -9,7 +9,7 @@ $build = new \DronePluginSdk\Build();
 /**
  * Instantiate saltstack client
  */
-$saltClient = new \naegelin\saltapi\SaltClient(
+$saltClient = new \SaltApi\SaltClient(
   $build->getSecret('saltapi_url'),
   $build->getSecret('saltapi_user'),
   $build->getSecret('saltapi_pass'),

@@ -4,26 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7aa85ad931965fbcb60a35cc595248d8",
+    "content-hash": "b118fa866b233083a3ae6307e37590cd",
     "packages": [
         {
-            "name": "naegelin/saltapi",
+            "name": "gboddin/saltapi",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/naegelin/saltapi.git",
-                "reference": "ebcda9b94c380db691bbcce83602dea3769beccc"
+                "url": "https://github.com/gboddin/saltapi.git",
+                "reference": "56965d24aebdea6bd100b352badbdc809d05c0af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/naegelin/saltapi/zipball/ebcda9b94c380db691bbcce83602dea3769beccc",
-                "reference": "ebcda9b94c380db691bbcce83602dea3769beccc",
+                "url": "https://api.github.com/repos/gboddin/saltapi/zipball/56965d24aebdea6bd100b352badbdc809d05c0af",
+                "reference": "56965d24aebdea6bd100b352badbdc809d05c0af",
                 "shasum": ""
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "naegelin\\SaltClient": "src"
+                "psr-4": {
+                    "SaltApi\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -34,10 +34,14 @@
                 {
                     "name": "Chris Naegelin",
                     "email": "naegelin@gmail.com"
+                },
+                {
+                    "name": "Gregory Boddin",
+                    "email": "gregory@siwhine.net"
                 }
             ],
             "description": "This is a PHP client for talking to the restful endpoint of Salt Stack",
-            "time": "2016-04-04T20:54:37+00:00"
+            "time": "2016-10-13T17:10:15+00:00"
         },
         {
             "name": "phpdrone/drone-plugin-sdk",
@@ -67,7 +71,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "naegelin/saltapi": 20
+        "gboddin/saltapi": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
